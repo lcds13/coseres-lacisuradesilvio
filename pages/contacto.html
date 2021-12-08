@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- animacion -->
+        <link rel="stylesheet" href="../css/animate.css" />
+        <!-- animacion -->
+
+
+    <!-- FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- FONT -->
+    <link rel="shortcut icon" href="../img/logo-blanco.png">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="https://kit.fontawesome.com/22534c6398.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+        <!-- HEADER -->
+
+    <header>
+    
+        <div class="logo-menu">
+
+            <nav class="contenedor-menu">
+                <div class="logo wow bounceInDown">
+                    <a href="../index.html">
+                        <img src="../img/logo-blanco.png"  alt="Logo">
+                    </a>
+                </div>
+                <div class="espacio"></div>
+                <input type="checkbox" id="check" >
+                    <label for="check" class="bar-btn">
+                            <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="nav-menu wow bounceInDown" id="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="discos.html">Discos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+        </div>
+        
+    </header>
+
+        <!-- MAIN -->
+
+    <main>
+        <div class="contacto-imagen-fondo">
+            <div class="formulario">
+                <div class="contenedor-form wow">
+                    <form>
+                        
+                        <h2>Contactanos</h2>
+                        
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="input">
+
+                        <input type="text" name="telefono" id="telefono" placeholder="Número de teléfono" class="input">
+
+                        <input type="email" name="email" id="email" placeholder="Email" class="input">
+
+
+                        <div class="contacto-form">
+                            <label for="contacto">¿Por donde prefieres que te contactemos?</label>
+                                <label for="telefono-opcion" class="contacto">Teléfono</label>
+                                <input type="radio" name="opcion" id="telefono-opcion">
+
+                                <label for="email-opcion" class="contacto">Email</label>
+                                <input type="radio" name="opcion" id="email-opcion">
+                        </div>
+
+                        <input type="text" name="asunto" id="asunto" placeholder="Asunto" class="input">
+
+                        <textarea name="consulta" id="" cols="30" rows="10" placeholder="Escribe aqui." class="input"></textarea>
+                        <div class="boton-enviar">
+                        <input type="submit" value="Enviar" class="enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+            <!-- FOOTER -->
+
+    <footer>
+        <div class="contenedor-footer">
+
+            <div class="logo-footer">
+                <img src="../img/lcds-logo-largo-blanco.png" alt="Logo La Cisura de Silvio" height="30px">
+            </div>
+
+            <div class="redes">
+                <a href="https://www.youtube.com/user/LaCisuradeSilvioRnR" target="_blank">
+                    <img src="../img/icon-youtube-r.png" height="37px" alt="Logo Youtube">
+                </a>
+                <a href="https://www.facebook.com/LaCisuradeSilvioRocanrol" target="_blank">
+                    <img src="../img/icon-facebook-r.png" height="37px" alt="Logo Facebook">
+                </a>
+                <a href="https://mobile.twitter.com/lacisura" target="_blank">
+                    <img src="../img/icon-twitter-r.png" height="37px" alt="Logo Twitter">
+                </a>
+                <a href="https://www.instagram.com/lacisuradesilvio/" target="_blank">
+                    <img src="../img/icon-instagram-r.png" height="37px" alt="Logo Instagram">
+                </a>
+            </div>
+
+        </div>
+        
+    </footer>
+
+
+    <script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</html>

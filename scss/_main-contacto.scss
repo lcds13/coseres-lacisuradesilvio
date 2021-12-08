@@ -1,0 +1,103 @@
+/* MAIN contacto */
+main{
+    .contacto-imagen-fondo{
+        background-image: url(../img/fondo-contacto.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        .formulario{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15vh;
+            padding-bottom: 10vh;
+            .contenedor-form{
+                width: 45vw;
+                background-color: rgba(0, 0, 0, 0.76);
+                border-radius: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Oswald', sans-serif;
+                animation: fadeIn;
+                animation-duration: 3s;
+                h2{
+                    color: #fff;
+                    text-align: center;
+                    font-weight: 500;
+                    padding: 20px 0px;
+                }
+                label{
+                    color: rgb(134, 134, 134);
+                    font-family: 'barlow';
+                    font-weight: 400;
+                    display: block;
+                    padding-bottom: 5px;
+                }
+                .input{
+                    width: 100%;
+                    padding: 5px;
+                    margin-bottom: 15px;
+                    background:rgba(0, 0, 0, 0);
+                    border-radius: 5px;
+                    border: 1px solid rgb(134, 134, 134);
+                    color: #fff;
+                }
+                .contacto{
+                    display: inline-block;
+                }
+                textarea{
+                    font-family: 'Barlow'
+                }
+                .boton-enviar{
+                    text-align: center;
+                }
+                .enviar{
+                    padding: 5px;
+                    text-align: center;
+                    width: 60%;
+                    background: rgba(0, 0, 0, 0);
+                    color: rgb(134, 134, 134);
+                    border: 1px solid rgb(134, 134, 134);
+                    border-radius: 5px;
+                    margin-bottom: 5vh;
+                    &:hover{
+                        background: rgba(134, 134, 134, 0.7);
+                        cursor: pointer;
+                        color: #000;
+                    }
+                }
+                div{
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+/* MOBILE CONTACTO */
+
+
+@media only screen and (min-width:0px) and (max-width:768px){
+
+
+    .contacto-imagen-fondo{
+        height: 130vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .contenedor-form{
+            width: 60vw;
+            text-align: center;
+            .input{
+                width: 80%;
+            }
+            .enviar{
+                width: 40%;
+            }
+        }
+    }
+}
