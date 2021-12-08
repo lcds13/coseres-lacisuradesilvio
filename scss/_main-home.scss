@@ -1,4 +1,4 @@
-$ff: 'oswald', sans-serif;
+@import "variables";
 
 /* MAIN */
 main{
@@ -22,15 +22,12 @@ main{
         ". . . . . . . . .";
         h2{
             grid-area: titulo;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centrar;
             color: #fff;
             font-family: $ff;
             font-size: 1.7em;
             font-weight: 500;
-            animation: fadeIn;
-            animation-duration: 1s;
+            @include animacion;
         }
         .contenedor-video{
             grid-area: video;
@@ -48,8 +45,7 @@ main{
             padding: 22% 0px 4vh 2vw;
             font-family: $ff;
             font-weight: 300;
-            animation: fadeIn;
-            animation-duration: 1s;
+            @include animacion;
             p{
                 width: 30vw;
                 padding-bottom: 4vw;
@@ -78,9 +74,7 @@ main{
         background-size: cover;
         background-attachment: fixed;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include centrar;
         .integrantes{
             display: grid;
             grid-template-columns: 30vw 30vw;
@@ -99,8 +93,7 @@ main{
                 font-size: 1.7em;
                 font-weight: 500;
                 padding-top: 3vh;
-                animation: fadeInUp;
-                animation-duration: 2s;
+                @include animacion2;
             }
             p{
                 color: #fff;
@@ -108,8 +101,7 @@ main{
                 font-weight: 300;
                 line-height: 2;
                 padding-top: 2vh;
-                animation: fadeInUp;
-                animation-duration: 2s;
+                @include animacion2;
             }
             .nombres{
                 grid-area: integrantes;

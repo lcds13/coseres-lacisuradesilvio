@@ -1,3 +1,6 @@
+@import "variables";
+
+
 /* FOOTER */
 
 footer{
@@ -10,20 +13,15 @@ footer{
         grid-template-areas: "logo . redes";
         .logo-footer{
             grid-area: logo;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centrar;
         }
         .redes{
             grid-area: redes;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centrar;
             a{
                 padding: 10px;
                 img:hover{
-                    animation: pulse;
-                    animation-duration: 1s;
+                    @include animacion(pulse, 1s);
                 }
             }
         }

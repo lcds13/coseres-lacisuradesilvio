@@ -1,0 +1,24 @@
+
+$ff: 'oswald', sans-serif;
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45);
+
+
+
+
+@mixin centrar($flex:flex, $jcenter:center, $acenter:center){
+    display: $flex;
+    justify-content: $jcenter;
+    align-items: $acenter;
+}
+
+@mixin animacion ($ani:fadeIn, $aniD:1s){
+    animation: $ani;
+    animation-duration: $aniD;
+}
+@mixin animacion2{
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+

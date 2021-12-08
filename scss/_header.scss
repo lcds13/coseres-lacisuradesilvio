@@ -1,12 +1,11 @@
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45);
+@import "variables";
 
 
 /* HEADER */
 header{
 position: fixed;
 width: 100vw;
-font-family: 'Oswald', sans-serif;
+font-family: $ff;
 font-size: 1.25em;
 font-weight: 400;
     .contenedor-menu{
@@ -18,15 +17,12 @@ font-weight: 400;
         background-color: $bc1;
         .logo{
             grid-area: logo;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centrar;
             img{
                 height: 45px;
                 &:hover{
                     cursor: pointer;
-                    animation: pulse;
-                    animation-duration: 2s;
+                    @include animacion(pulse, 2s);
                 }
             }
         }
@@ -39,9 +35,7 @@ font-weight: 400;
         .nav-menu{
             list-style-type: none;
             grid-area: menu;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            @include centrar(flex ,flex-end);
             a{
                 padding-left: 30px;
                 text-decoration: none;
@@ -73,9 +67,7 @@ font-weight: 400;
         .logo{
             grid-area: logo;
             background-color: $bc2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centrar;
             animation: none;
         }
         .espacio{
@@ -87,9 +79,7 @@ font-weight: 400;
         }
         .bar-btn{
             grid-area: menu;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centrar;
             background-color: $bc2;
             color: #fff;
             cursor: pointer;
