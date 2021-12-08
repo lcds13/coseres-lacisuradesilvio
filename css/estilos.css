@@ -483,7 +483,7 @@ main .discos {
         main .discos .contenedor-discos .imagen-disco .canciones a {
           animation: fadeInUpBig;
           animation-duration: 3s; }
-        main .discos .contenedor-discos .imagen-disco .canciones:hover {
+        main .discos .contenedor-discos .imagen-disco .canciones .formato-p:hover {
           color: #868686; }
     main .discos .contenedor-discos .disco-1 p {
       animation: fadeInUp;
