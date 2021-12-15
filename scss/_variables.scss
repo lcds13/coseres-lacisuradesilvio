@@ -1,11 +1,22 @@
 
 $ff: 'oswald', sans-serif;
 
+/* $gris: rgb(134, 134, 134);
+
 $bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45);
+$bc2: rgba( 0, 0, 0, 0.45); */
 
-
-
+$colores:(
+    gris: rgb(134, 134, 134),
+    blanco: rgb(255, 255, 255),
+    negro: rgb(0, 0, 0),
+    bcHeader:rgba( 0, 0, 0, 0.25),
+    bcHeaderMobile: rgba( 0, 0, 0, 0.45),
+    bcVideos: rgb(15, 15, 15),
+    bcIntegrantes: rgba( 0, 0, 0, 0.6),
+    bcBio: rgba( 0, 0, 0, 0.76),
+    bcGaleria: rgb( 30, 30, 30),
+);
 
 @mixin centrar($flex:flex, $jcenter:center, $acenter:center){
     display: $flex;
@@ -22,3 +33,11 @@ $bc2: rgba( 0, 0, 0, 0.45);
     animation-duration: 2s;
 }
 
+.titulo{
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 500;
+    @include animacion2;
+    font-family: $ff;
+    text-align: center;
+}

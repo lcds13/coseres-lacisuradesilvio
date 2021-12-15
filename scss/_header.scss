@@ -9,16 +9,13 @@ font-family: $ff;
 font-size: 1.25em;
 font-weight: 400;
     .contenedor-menu{
-        display: grid;
-        grid-template-columns: repeat(12,1fr);
-        grid-template-rows: 13vh;
-        grid-template-areas: 
-        "logo logo . . . . menu menu menu menu menu .";
-        background-color: $bc1;
+        @include centrar(flex, space-around,center);
+        height: 15vh;
+        background-color: map-get($colores, bcHeader);
         .logo{
-            grid-area: logo;
             @include centrar;
             img{
+                padding-right: 10vw;
                 height: 45px;
                 &:hover{
                     cursor: pointer;
@@ -36,12 +33,13 @@ font-weight: 400;
             list-style-type: none;
             grid-area: menu;
             @include centrar(flex ,flex-end);
+            padding-left: 10vw;
             a{
                 padding-left: 30px;
                 text-decoration: none;
-                color: #fff;
+                color: map-get($colores, blanco);
                 &:hover{
-                    color: rgb(134, 134, 134);
+                    color: map-get($colores, gris);
                 }    
             }
         }
@@ -55,49 +53,51 @@ font-weight: 400;
 
 
 @media only screen and (min-width:0px) and (max-width:768px){
+    header{
+        .contenedor-menu{
+            background-color: map-get($colores, bcHeaderMobile);
+            display: grid;
+            grid-template-columns: 30vw 40vw 30vw;
+            grid-template-rows: 15vh 85vh;
+            grid-template-areas:  
+            "logo espacio menu"
+            "desplegable desplegable desplegable"; 
+            .logo{
+                grid-area: logo;
+                @include centrar;
+                animation: none; padding-left: 10vw;
+            }
+            .espacio{
+                grid-area: espacio;
 
-    .contenedor-menu{
-        display: grid;
-        grid-template-columns: 30vw 40vw 30vw;
-        grid-template-rows: 15vh 85vh;
-        grid-template-areas:  
-        "logo espacio menu" 
-        "desplegable desplegable desplegable";
-        background-color: transparent;
-        .logo{
-            grid-area: logo;
-            background-color: $bc2;
-            @include centrar;
-            animation: none;
-        }
-        .espacio{
-            grid-area: espacio;
-            background-color: $bc2;
-        }
-        #check:checked ~ .nav-menu{
-            display: flex;
-        }
-        .bar-btn{
-            grid-area: menu;
-            @include centrar;
-            background-color: $bc2;
-            color: #fff;
-            cursor: pointer;
-            font-size: 35px;
-        }
-        .nav-menu{
-            grid-area: desplegable;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: $bc2;
-            li{
-                padding: 4vh 0vw;
             }
-            a{
+            
+            .bar-btn{
+                grid-area: menu;
+                @include centrar;
+                color: map-get($colores, blanco);
+                cursor: pointer;
+                font-size: 35px;
+            }
+            .nav-menu{
                 padding: 0;
+                height: 85vh;
+                grid-area: desplegable;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: map-get($colores, bcHeaderMobile);
+                li{
+                    padding: 4vh 0vw;
+                }
+                a{
+                    padding: 0;
+                }
             }
-        }   
-    }      
-}
+            #check:checked ~ .nav-menu{
+                display: flex;
+            }
+        }    
+    }  
+} 

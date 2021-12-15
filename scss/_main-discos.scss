@@ -1,8 +1,10 @@
+@import "variables";
+
 /* MAIN discos */
 main{
     .discos{
         height: 335vh;
-        background-color: rgb(30, 30, 30);
+        background-color: map-get($colores, bcGaleria);
         .contenedor-discos{
             padding: 13vh 17vw 0vh 17vw;
             .imagen-disco{
@@ -16,38 +18,22 @@ main{
                     padding-top: 3vh;
                     list-style: none;
                     a{
-                        animation: fadeInUpBig;
-                        animation-duration: 3s;
+                        @include animacion(fadeInUpBig, 3s);
                     }
                     .formato-p:hover{
-                        color: rgb(134, 134, 134);
+                        color: map-get($colores, gris);
                     }
-                }
-            }
-            .disco-1{
-                p{
-                    animation: fadeInUp;
-                    animation-duration: 3s;
                 }
             }
             .disco-2{
                 padding-top: 7vh;
-                p{
-                    animation: fadeInUp;
-                    animation-duration: 3s;
-                }
             }
             h2 {
+                @extend .titulo;
                 padding: 4vh 0px;
-                color: #fff;
-                text-align: center;
-                font-family: 'Oswald', sans-serif;
-                font-weight: 400;
-                animation: fadeInUp;
-                animation-duration: 3s;
             }
             .formato-p{
-                color: #fff;
+                color: map-get($colores, blanco);
                 font-size: 1.25em;
                 font-weight: 200;
                 font-family: 'Barlow', sans-serif;
@@ -58,6 +44,7 @@ main{
             .descripcion{
                 padding-bottom: 4vh;
                 text-align: center;
+                @include animacion(fadeInUp, 3s);
             }
         }
     }
@@ -66,12 +53,15 @@ main{
     /* MOBILE DISCOS */
 
 @media only screen and (min-width:0px) and (max-width:768px){
-
-    .discos{
-        height: 350vh;
-    }
-    .imagen-disco iframe{
-        width: 65vw;
-        height: 25vh;
+    main{
+        .discos{
+            height: 340vh;
+            .contenedor-discos{
+                .imagen-disco iframe{
+                    width: 65vw;
+                    height: 25vh;
+                }
+            }
+        }
     }
 }

@@ -1,3 +1,5 @@
+@import "variables";
+
 /* MAIN contacto */
 main{
     .contacto-imagen-fondo{
@@ -15,35 +17,31 @@ main{
             padding-bottom: 10vh;
             .contenedor-form{
                 width: 45vw;
-                background-color: rgba(0, 0, 0, 0.76);
+                background-color: map-get($colores, bcBio);
                 border-radius: 35px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: 'Oswald', sans-serif;
-                animation: fadeIn;
-                animation-duration: 3s;
+                @include centrar;
+                font-family: $ff;
+                text-align: center;
+                @include animacion(fadeIn, 3s);
                 h2{
-                    color: #fff;
-                    text-align: center;
-                    font-weight: 500;
+                    @extend .titulo;
                     padding: 20px 0px;
                 }
                 label{
-                    color: rgb(134, 134, 134);
+                    color: map-get($colores, gris);;
                     font-family: 'barlow';
                     font-weight: 400;
                     display: block;
                     padding-bottom: 5px;
                 }
                 .input{
-                    width: 100%;
+                    width: 80%;
                     padding: 5px;
                     margin-bottom: 15px;
-                    background:rgba(0, 0, 0, 0);
+                    background: transparent;
                     border-radius: 5px;
-                    border: 1px solid rgb(134, 134, 134);
-                    color: #fff;
+                    border: 1px solid map-get($colores, gris);
+                    color: map-get($colores, blanco);
                 }
                 .contacto{
                     display: inline-block;
@@ -58,15 +56,15 @@ main{
                     padding: 5px;
                     text-align: center;
                     width: 60%;
-                    background: rgba(0, 0, 0, 0);
-                    color: rgb(134, 134, 134);
-                    border: 1px solid rgb(134, 134, 134);
+                    background: transparent;
+                    color: map-get($colores, gris);
+                    border: 1px solid map-get($colores, gris);
                     border-radius: 5px;
                     margin-bottom: 5vh;
                     &:hover{
                         background: rgba(134, 134, 134, 0.7);
                         cursor: pointer;
-                        color: #000;
+                        color: map-get($colores, negro);
                     }
                 }
                 div{
@@ -82,21 +80,21 @@ main{
 
 
 @media only screen and (min-width:0px) and (max-width:768px){
-
-
-    .contacto-imagen-fondo{
-        height: 130vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .contenedor-form{
-            width: 60vw;
-            text-align: center;
-            .input{
-                width: 80%;
-            }
-            .enviar{
-                width: 40%;
+    main{
+        .contacto-imagen-fondo{
+            height: 130vh;
+            @include centrar;
+            .formulario{
+                .contenedor-form{
+                    width: 90vw;
+                    text-align: center;
+                    .input{
+                        width: 80%;
+                    }
+                    .enviar{
+                        width: 40%;
+                    }
+                }
             }
         }
     }

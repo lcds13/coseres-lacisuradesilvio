@@ -1,0 +1,20 @@
+En index aplique las etiquetas:
+<meta name="DESCRIPTION" content="La Cisura de Silvio. Banda de rock de la ciudad de Pergamino.">
+<meta name="keywords" content="la cisura de silvio, lcds, rock, rocanrol, pergamino, rock nacional">
+
+En bio:
+<meta name="DESCRIPTION" content="La cisura de silvio, nuestra historia ">
+<meta name="keywords" content="la cisura de silvio, lcds, rock, rocanrol, pergamino, rock nacional, biografia, historia">
+
+En galeria:
+<meta name="DESCRIPTION" content="La Cisura de Silvio. Galeria de fotografias.">
+<meta name="keywords" content="la cisura de silvio, lcds, rock, rocanrol, pergamino, rock nacional, galeria, fotos">
+
+En discos:
+<meta name="DESCRIPTION" content="La Cisura de Silvio. Nuestra discografia.">
+<meta name="keywords" content="la cisura de silvio, lcds, rock, rocanrol, pergamino, rock nacional, discos, cd, album, trece, rocanrol mi corazon">
+    
+En contacto:
+<meta name="DESCRIPTION" content="La cisura de silvio, contactanos.">
+<meta name="keywords" content="la cisura de silvio, lcds, rock, rocanrol, pergamino, rock nacional, contacto">
+

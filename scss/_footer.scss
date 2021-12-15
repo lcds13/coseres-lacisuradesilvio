@@ -6,7 +6,7 @@
 footer{
     .contenedor-footer{
         height: 20vh;
-        background-color: rgb(0, 0, 0);
+        background-color: map-get($colores, negro);
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 20vh;
@@ -32,15 +32,17 @@ footer{
 
         
 @media only screen and (min-width:0px) and (max-width:768px){ 
-    .contenedor-footer{
-        height: 30vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: "logo""redes";
-        .redes{
-            align-items: flex-start;
-        }
-    }   
+    footer{
+        .contenedor-footer{
+            height: 30vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2,1fr);
+            grid-template-areas: "logo""redes";
+            .redes{
+                align-items: flex-start;
+            }
+        }   
+    }
 }
 

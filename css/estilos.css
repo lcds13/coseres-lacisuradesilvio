@@ -3,6 +3,19 @@
   padding: 0;
   box-sizing: border-box; }
 
+/* $gris: rgb(134, 134, 134);
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45); */
+.titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  font-family: "oswald", sans-serif;
+  text-align: center; }
+
 /* HEADER */
 header {
   position: fixed;
@@ -11,17 +24,17 @@ header {
   font-size: 1.25em;
   font-weight: 400; }
   header .contenedor-menu {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 13vh;
-    grid-template-areas: "logo logo . . . . menu menu menu menu menu .";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
     background-color: rgba(0, 0, 0, 0.25); }
     header .contenedor-menu .logo {
-      grid-area: logo;
       display: flex;
       justify-content: center;
       align-items: center; }
       header .contenedor-menu .logo img {
+        padding-right: 10vw;
         height: 45px; }
         header .contenedor-menu .logo img:hover {
           cursor: pointer;
@@ -36,54 +49,68 @@ header {
       grid-area: menu;
       display: flex;
       justify-content: flex-end;
-      align-items: center; }
+      align-items: center;
+      padding-left: 10vw; }
       header .contenedor-menu .nav-menu a {
         padding-left: 30px;
         text-decoration: none;
-        color: #fff; }
+        color: white; }
         header .contenedor-menu .nav-menu a:hover {
           color: #868686; }
 
 /* MOBILE  HEADER*/
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  .contenedor-menu {
+  header .contenedor-menu {
+    background-color: rgba(0, 0, 0, 0.45);
     display: grid;
     grid-template-columns: 30vw 40vw 30vw;
     grid-template-rows: 15vh 85vh;
-    grid-template-areas: "logo espacio menu"  "desplegable desplegable desplegable";
-    background-color: transparent; }
-    .contenedor-menu .logo {
+    grid-template-areas: "logo espacio menu" "desplegable desplegable desplegable"; }
+    header .contenedor-menu .logo {
       grid-area: logo;
-      background-color: rgba(0, 0, 0, 0.45);
       display: flex;
       justify-content: center;
       align-items: center;
-      animation: none; }
-    .contenedor-menu .espacio {
-      grid-area: espacio;
-      background-color: rgba(0, 0, 0, 0.45); }
-    .contenedor-menu #check:checked ~ .nav-menu {
-      display: flex; }
-    .contenedor-menu .bar-btn {
+      animation: none;
+      padding-left: 10vw; }
+    header .contenedor-menu .espacio {
+      grid-area: espacio; }
+    header .contenedor-menu .bar-btn {
       grid-area: menu;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.45);
-      color: #fff;
+      color: white;
       cursor: pointer;
       font-size: 35px; }
-    .contenedor-menu .nav-menu {
+    header .contenedor-menu .nav-menu {
+      padding: 0;
+      height: 85vh;
       grid-area: desplegable;
       display: none;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: rgba(0, 0, 0, 0.45); }
-      .contenedor-menu .nav-menu li {
+      header .contenedor-menu .nav-menu li {
         padding: 4vh 0vw; }
-      .contenedor-menu .nav-menu a {
-        padding: 0; } }
+      header .contenedor-menu .nav-menu a {
+        padding: 0; }
+    header .contenedor-menu #check:checked ~ .nav-menu {
+      display: flex; } }
+
+/* $gris: rgb(134, 134, 134);
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45); */
+.titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  font-family: "oswald", sans-serif;
+  text-align: center; }
 
 /* MAIN */
 main .imagen-fondo {
@@ -93,7 +120,7 @@ main .imagen-fondo {
 
 main .videos {
   height: 100vh;
-  background: #151515;
+  background: #0f0f0f;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -102,13 +129,7 @@ main .videos {
     grid-area: titulo;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-family: "oswald", sans-serif;
-    font-size: 1.7em;
-    font-weight: 500;
-    animation: fadeIn;
-    animation-duration: 1s; }
+    align-items: center; }
   main .videos .contenedor-video {
     grid-area: video; }
     main .videos .contenedor-video .video iframe {
@@ -126,18 +147,17 @@ main .videos {
     main .videos .contenedor-parrafo p {
       width: 30vw;
       padding-bottom: 4vw;
-      color: #fff;
+      color: white;
       font-size: 1.25em;
       font-weight: 300; }
     main .videos .contenedor-parrafo a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       padding: 10px 15px;
-      border: 1px solid #fff;
+      border: 1px solid white;
       border-radius: 5px;
       font-size: 1.1em; }
       main .videos .contenedor-parrafo a:hover {
-        color: #fff;
         background: #868686; }
 
 main .imagen-main {
@@ -161,16 +181,9 @@ main .imagen-main {
     border-radius: 15px; }
     main .imagen-main .integrantes h3 {
       grid-area: titulo;
-      text-align: center;
-      color: #fff;
-      font-family: "oswald", sans-serif;
-      font-size: 1.7em;
-      font-weight: 500;
-      padding-top: 3vh;
-      animation: fadeInUp;
-      animation-duration: 2s; }
+      padding-top: 3vh; }
     main .imagen-main .integrantes p {
-      color: #fff;
+      color: white;
       font-size: 1.25em;
       font-weight: 300;
       line-height: 2;
@@ -193,19 +206,22 @@ main .imagen-main {
     background-image: url(../img/fondo2.jpg);
     background-position: center; }
   main .videos {
-    height: 150vh;
+    height: 120vh;
     display: grid;
-    grid-template-rows: repeat(9, 1fr);
-    grid-template-areas: ". . . . . . . . ." ". . . titulo titulo titulo . . ." ". video video video video video video video ." ". video video video video video video video ." ". video video video video video video video ." ". parrafo parrafo parrafo parrafo parrafo parrafo parrafo ." ". parrafo parrafo parrafo parrafo parrafo parrafo parrafo ." ". parrafo parrafo parrafo parrafo parrafo parrafo parrafo ." ". . . . . . . . ."; }
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: ". . . titulo titulo titulo . . ." ". video video video video video video video ." ". video video video video video video video ." ". video video video video video video video ." ". parrafo parrafo parrafo parrafo parrafo parrafo parrafo ." ". parrafo parrafo parrafo parrafo parrafo parrafo parrafo ." ". parrafo parrafo parrafo parrafo parrafo parrafo parrafo ." ". . . . . . . . ." ". . . . . . . . ."; }
     main .videos h2 {
-      align-items: flex-start; }
+      align-items: flex-end; }
     main .videos .contenedor-video .video iframe {
-      width: 100%; }
+      width: 100%;
+      margin-top: 5vh; }
     main .videos .contenedor-parrafo {
       padding: 0; }
       main .videos .contenedor-parrafo p {
         width: 100%;
-        padding: 15vh 0vw; }
+        margin: 5vh 0; }
+      main .videos .contenedor-parrafo a {
+        margin-top: 5vh; }
   main .imagen-main {
     height: 150vh;
     background-image: url(../img/imagen1.jpg);
@@ -217,21 +233,39 @@ main .imagen-main {
       text-align: center;
       width: 60%;
       border-radius: 15px;
-      background-color: rgba(0, 0, 0, 0.4); }
+      background-color: rgba(0, 0, 0, 0.45); }
       main .imagen-main .integrantes-mobile h3 {
         text-align: center;
-        color: #fff;
+        color: white;
         font-family: "oswald", sans-serif;
         font-size: 1.7em;
         font-weight: 400;
-        padding-bottom: 10vh;
-        padding-top: 5vh; }
+        padding-bottom: 8vh;
+        padding-top: 5vh;
+        animation: fadeIn;
+        animation-duration: 3s; }
       main .imagen-main .integrantes-mobile p {
-        color: #fff;
+        color: white;
         font-weight: 300;
         line-height: 1.5;
         font-size: 1em;
-        padding-bottom: 3vh; } }
+        padding-bottom: 3vh;
+        text-align: center;
+        animation: fadeIn;
+        animation-duration: 1s; } }
+
+/* $gris: rgb(134, 134, 134);
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45); */
+.titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  font-family: "oswald", sans-serif;
+  text-align: center; }
 
 /* MAIN bio */
 main .bio-contenido-main {
@@ -241,53 +275,60 @@ main .bio-contenido-main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: 'oswald', sans-serif; }
+  font-family: "oswald", sans-serif; }
   main .bio-contenido-main .contenido-main {
     padding: 7vh 5vw;
     background-color: rgba(0, 0, 0, 0.76);
     border-radius: 35px; }
     main .bio-contenido-main .contenido-main h2 {
-      color: #fff;
-      font-weight: 500;
-      text-align: center;
-      padding-bottom: 60px;
-      font-size: 1.8em;
-      animation: fadeInUp;
-      animation-duration: 2s; }
+      padding-bottom: 60px; }
     main .bio-contenido-main .contenido-main .texto {
       padding-bottom: 5vh; }
       main .bio-contenido-main .contenido-main .texto h4 {
         text-align: center;
-        color: #fff;
+        color: white;
         font-weight: 400;
         font-size: 1.25em;
         padding-bottom: 15px;
         animation: fadeInUp;
-        animation-duration: 3s; }
+        animation-duration: 2s; }
       main .bio-contenido-main .contenido-main .texto p {
-        color: #fff;
+        color: white;
         font-family: 'Barlow', sans-serif;
         font-weight: 200;
         font-size: 1.15em;
         padding-bottom: 20px;
         animation: fadeInUp;
-        animation-duration: 3s; }
+        animation-duration: 2s; }
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  main .bio-contenido-main {
+    padding-top: 20vh; }
+    main .bio-contenido-main p {
+      text-align: justify; } }
+
+/* $gris: rgb(134, 134, 134);
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45); */
+.titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  font-family: "oswald", sans-serif;
+  text-align: center; }
 
 /* MAIN galeria */
 main .galeria-contenido-main {
   padding: 20vh 10vw;
   background-color: #1e1e1e;
-  font-family: 'oswald', sans-serif;
+  font-family: "oswald", sans-serif;
   height: 350vh;
   /* MODAL GALERIA */ }
   main .galeria-contenido-main h2 {
-    color: #fff;
-    font-weight: 500;
-    text-align: center;
-    padding-bottom: 60px;
-    font-size: 1.8em;
-    animation: fadeInUp;
-    animation-duration: 2s; }
+    padding-bottom: 60px; }
   main .galeria-contenido-main .contenedor-imagenes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -304,10 +345,10 @@ main .galeria-contenido-main {
       overflow: hidden; }
       main .galeria-contenido-main .contenedor-imagenes .fondo .click {
         text-decoration: none;
-        color: rgba(0, 0, 0, 0);
+        color: transparent;
         font-size: 1000px; }
       main .galeria-contenido-main .contenedor-imagenes .fondo .hover2:hover {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.45);
         padding: 8px;
         border-radius: 10px; }
     main .galeria-contenido-main .contenedor-imagenes .hover:hover {
@@ -401,16 +442,16 @@ main .galeria-contenido-main {
       animation: fadeInUp;
       animation-duration: 4s; }
     main .galeria-contenido-main .contenedor-imagenes .vermas {
-      color: rgba(0, 0, 0, 0);
+      color: transparent;
       text-decoration: none;
       font-size: 30px;
-      font-family: 'Oswald', sans-serif;
-      background-color: rgba(0, 0, 0, 0);
+      font-family: "oswald", sans-serif;
+      background-color: transparent;
       padding: 125px;
       animation: fadeInUp;
       animation-duration: 4s; }
       main .galeria-contenido-main .contenedor-imagenes .vermas:hover {
-        color: #fff; }
+        color: white; }
     main .galeria-contenido-main .contenedor-imagenes .pie {
       grid-area: foto;
       display: flex;
@@ -422,7 +463,7 @@ main .galeria-contenido-main {
     main .galeria-contenido-main .modal:target {
       display: block;
       position: fixed;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.76);
       top: 0;
       left: 0;
       width: 100%;
@@ -432,7 +473,7 @@ main .galeria-contenido-main {
       text-align: right;
       padding: 15px 50px 0 0;
       text-decoration: none;
-      color: #fff;
+      color: white;
       font-size: 25px; }
     main .galeria-contenido-main .modal .imagen-galeria {
       height: 100vh;
@@ -443,7 +484,7 @@ main .galeria-contenido-main {
         margin-bottom: 5vh;
         height: 80vh; }
       main .galeria-contenido-main .modal .imagen-galeria a {
-        color: #fff;
+        color: white;
         font-size: 40px;
         text-decoration: none;
         margin: 0 10px; }
@@ -460,10 +501,26 @@ main .galeria-contenido-main {
         background-size: cover;
         background-position: center; }
         main .galeria-contenido-main .contenedor-imagenes .fondo .click {
-          display: none; }
+          /* display: none; */ }
       main .galeria-contenido-main .contenedor-imagenes .pie img {
         width: 80vw;
-        background-position: center; } }
+        background-position: center; }
+    main .galeria-contenido-main .modal .imagen-galeria img {
+      height: auto;
+      width: 100%; } }
+
+/* $gris: rgb(134, 134, 134);
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45); */
+.titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  font-family: "oswald", sans-serif;
+  text-align: center; }
 
 /* MAIN discos */
 main .discos {
@@ -485,24 +542,12 @@ main .discos {
           animation-duration: 3s; }
         main .discos .contenedor-discos .imagen-disco .canciones .formato-p:hover {
           color: #868686; }
-    main .discos .contenedor-discos .disco-1 p {
-      animation: fadeInUp;
-      animation-duration: 3s; }
     main .discos .contenedor-discos .disco-2 {
       padding-top: 7vh; }
-      main .discos .contenedor-discos .disco-2 p {
-        animation: fadeInUp;
-        animation-duration: 3s; }
     main .discos .contenedor-discos h2 {
-      padding: 4vh 0px;
-      color: #fff;
-      text-align: center;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 400;
-      animation: fadeInUp;
-      animation-duration: 3s; }
+      padding: 4vh 0px; }
     main .discos .contenedor-discos .formato-p {
-      color: #fff;
+      color: white;
       font-size: 1.25em;
       font-weight: 200;
       font-family: 'Barlow', sans-serif;
@@ -511,15 +556,30 @@ main .discos {
       text-decoration: none; }
     main .discos .contenedor-discos .descripcion {
       padding-bottom: 4vh;
-      text-align: center; }
+      text-align: center;
+      animation: fadeInUp;
+      animation-duration: 3s; }
 
 /* MOBILE DISCOS */
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  .discos {
-    height: 350vh; }
-  .imagen-disco iframe {
-    width: 65vw;
-    height: 25vh; } }
+  main .discos {
+    height: 340vh; }
+    main .discos .contenedor-discos .imagen-disco iframe {
+      width: 65vw;
+      height: 25vh; } }
+
+/* $gris: rgb(134, 134, 134);
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45); */
+.titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  font-family: "oswald", sans-serif;
+  text-align: center; }
 
 /* MAIN contacto */
 main .contacto-imagen-fondo {
@@ -542,13 +602,11 @@ main .contacto-imagen-fondo {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Oswald', sans-serif;
+      font-family: "oswald", sans-serif;
+      text-align: center;
       animation: fadeIn;
       animation-duration: 3s; }
       main .contacto-imagen-fondo .formulario .contenedor-form h2 {
-        color: #fff;
-        text-align: center;
-        font-weight: 500;
         padding: 20px 0px; }
       main .contacto-imagen-fondo .formulario .contenedor-form label {
         color: #868686;
@@ -557,13 +615,13 @@ main .contacto-imagen-fondo {
         display: block;
         padding-bottom: 5px; }
       main .contacto-imagen-fondo .formulario .contenedor-form .input {
-        width: 100%;
+        width: 80%;
         padding: 5px;
         margin-bottom: 15px;
-        background: rgba(0, 0, 0, 0);
+        background: transparent;
         border-radius: 5px;
         border: 1px solid #868686;
-        color: #fff; }
+        color: white; }
       main .contacto-imagen-fondo .formulario .contenedor-form .contacto {
         display: inline-block; }
       main .contacto-imagen-fondo .formulario .contenedor-form textarea {
@@ -574,7 +632,7 @@ main .contacto-imagen-fondo {
         padding: 5px;
         text-align: center;
         width: 60%;
-        background: rgba(0, 0, 0, 0);
+        background: transparent;
         color: #868686;
         border: 1px solid #868686;
         border-radius: 5px;
@@ -582,24 +640,37 @@ main .contacto-imagen-fondo {
         main .contacto-imagen-fondo .formulario .contenedor-form .enviar:hover {
           background: rgba(134, 134, 134, 0.7);
           cursor: pointer;
-          color: #000; }
+          color: black; }
       main .contacto-imagen-fondo .formulario .contenedor-form div {
         padding-bottom: 10px; }
 
 /* MOBILE CONTACTO */
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  .contacto-imagen-fondo {
+  main .contacto-imagen-fondo {
     height: 130vh;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .contacto-imagen-fondo .contenedor-form {
-      width: 60vw;
+    main .contacto-imagen-fondo .formulario .contenedor-form {
+      width: 90vw;
       text-align: center; }
-      .contacto-imagen-fondo .contenedor-form .input {
+      main .contacto-imagen-fondo .formulario .contenedor-form .input {
         width: 80%; }
-      .contacto-imagen-fondo .contenedor-form .enviar {
+      main .contacto-imagen-fondo .formulario .contenedor-form .enviar {
         width: 40%; } }
+
+/* $gris: rgb(134, 134, 134);
+
+$bc1: rgba( 0, 0, 0, 0.25);
+$bc2: rgba( 0, 0, 0, 0.45); */
+.titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  font-family: "oswald", sans-serif;
+  text-align: center; }
 
 /* FOOTER */
 footer .contenedor-footer {
@@ -627,11 +698,11 @@ footer .contenedor-footer {
 
 /*  MOBILE FOOTER  */
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  .contenedor-footer {
+  footer .contenedor-footer {
     height: 30vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "logo" "redes"; }
-    .contenedor-footer .redes {
+    footer .contenedor-footer .redes {
       align-items: flex-start; } }
