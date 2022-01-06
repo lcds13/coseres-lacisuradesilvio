@@ -3,10 +3,6 @@
   padding: 0;
   box-sizing: border-box; }
 
-/* $gris: rgb(134, 134, 134);
-
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45); */
 .titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
   color: #fff;
   font-size: 1.8em;
@@ -99,10 +95,6 @@ header {
     header .contenedor-menu #check:checked ~ .nav-menu {
       display: flex; } }
 
-/* $gris: rgb(134, 134, 134);
-
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45); */
 .titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
   color: #fff;
   font-size: 1.8em;
@@ -254,10 +246,6 @@ main .imagen-main {
         animation: fadeIn;
         animation-duration: 1s; } }
 
-/* $gris: rgb(134, 134, 134);
-
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45); */
 .titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
   color: #fff;
   font-size: 1.8em;
@@ -307,10 +295,6 @@ main .bio-contenido-main {
     main .bio-contenido-main p {
       text-align: justify; } }
 
-/* $gris: rgb(134, 134, 134);
-
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45); */
 .titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
   color: #fff;
   font-size: 1.8em;
@@ -500,8 +484,6 @@ main .galeria-contenido-main {
       main .galeria-contenido-main .contenedor-imagenes .fondo {
         background-size: cover;
         background-position: center; }
-        main .galeria-contenido-main .contenedor-imagenes .fondo .click {
-          /* display: none; */ }
       main .galeria-contenido-main .contenedor-imagenes .pie img {
         width: 80vw;
         background-position: center; }
@@ -509,10 +491,6 @@ main .galeria-contenido-main {
       height: auto;
       width: 100%; } }
 
-/* $gris: rgb(134, 134, 134);
-
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45); */
 .titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
   color: #fff;
   font-size: 1.8em;
@@ -568,10 +546,6 @@ main .discos {
       width: 65vw;
       height: 25vh; } }
 
-/* $gris: rgb(134, 134, 134);
-
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45); */
 .titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
   color: #fff;
   font-size: 1.8em;
@@ -659,10 +633,6 @@ main .contacto-imagen-fondo {
       main .contacto-imagen-fondo .formulario .contenedor-form .enviar {
         width: 40%; } }
 
-/* $gris: rgb(134, 134, 134);
-
-$bc1: rgba( 0, 0, 0, 0.25);
-$bc2: rgba( 0, 0, 0, 0.45); */
 .titulo, main .videos h2, main .imagen-main .integrantes h3, main .bio-contenido-main .contenido-main h2, main .galeria-contenido-main h2, main .discos .contenedor-discos h2, main .contacto-imagen-fondo .formulario .contenedor-form h2 {
   color: #fff;
   font-size: 1.8em;
